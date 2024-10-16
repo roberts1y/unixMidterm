@@ -24,6 +24,9 @@
     
       <link rel="stylesheet" href="assets/stylesheets/main.0253249f.min.css">
       
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
       
 
 
@@ -51,7 +54,12 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="dark" data-md-color-primary="pink" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -60,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#midterm-review-introduction-to-unix-and-shell-programming" class="md-skip">
           Skip to content
         </a>
       
@@ -96,15 +104,15 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome to MkDocs
+              Midterm Review: Introduction to UNIX and Shell Programming
             
           </span>
         </div>
       </div>
     </div>
     
+      
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -202,7 +210,7 @@
           
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Midterm Review: Introduction to UNIX and Shell Programming
   </span>
   
 
@@ -213,7 +221,7 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Midterm Review: Introduction to UNIX and Shell Programming
   </span>
   
 
@@ -235,18 +243,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#key-unix-concepts" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      Key UNIX Concepts
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
+  <a href="#command-line-basics" class="md-nav__link">
     <span class="md-ellipsis">
-      Project layout
+      Command Line Basics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permissions-and-directory-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permissions and Directory Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shell Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcards-and-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wildcards and Scripts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditionals-and-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditionals and Loops
     </span>
   </a>
   
@@ -287,18 +331,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#key-unix-concepts" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      Key UNIX Concepts
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
+  <a href="#command-line-basics" class="md-nav__link">
     <span class="md-ellipsis">
-      Project layout
+      Command Line Basics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permissions-and-directory-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permissions and Directory Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shell Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcards-and-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wildcards and Scripts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditionals-and-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditionals and Loops
     </span>
   </a>
   
@@ -319,21 +399,84 @@
                   
 
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+<h1 id="midterm-review-introduction-to-unix-and-shell-programming">Midterm Review: Introduction to UNIX and Shell Programming</h1>
+<h2 id="key-unix-concepts"><strong>Key UNIX Concepts</strong></h2>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
+<li><strong>UNIX</strong>: A family of operating systems with a unified file system, kernel, processes, and shell.</li>
+<li><strong>Connecting to Virtual Machine</strong>:</li>
+<li>Use <code>ssh</code>, Windows Terminal, or PuTTY/MobaXTerm.</li>
+<li><strong>Shells Available</strong>:</li>
+<li>BASH, C-shell, T-shell, etc.  </li>
+<li><strong>Usage</strong>: Interpret typed commands and run them.</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
+<h2 id="command-line-basics"><strong>Command Line Basics</strong></h2>
+<ul>
+<li><strong>Useful Commands</strong>:</li>
+<li><code>finger [loginID]</code>: Find user info.</li>
+<li><code>man [command]</code>: Open manual page.</li>
+<li><code>pwd</code>: Print working directory.</li>
+<li><code>ls</code>: List directory contents.</li>
+<li><code>mkdir</code> / <code>rmdir</code>: Create or remove directories.</li>
+<li><code>rm filename</code>: Remove a file.</li>
+<li><strong>Vim Editor Basics</strong>:</li>
+<li><strong>Modes</strong>: Insert, Command, Last line.</li>
+<li>Commands:<ul>
+<li><code>i</code>: Enter Insert mode.</li>
+<li><code>Esc</code>: Return to Command mode.</li>
+<li><code>:wq</code>: Save and quit.</li>
+</ul>
+</li>
+<li><strong>Nano Editor Basics</strong>: No modes.  </li>
+<li><code>CTRL + O</code>: Save, <code>CTRL + X</code>: Exit.</li>
+</ul>
+<h2 id="permissions-and-directory-management"><strong>Permissions and Directory Management</strong></h2>
+<ul>
+<li><strong>File and Directory Permissions</strong>:</li>
+<li><code>chmod</code> to change permissions.</li>
+<li>Read (r), Write (w), Execute (x).</li>
+<li><strong>Permissions Application</strong>:</li>
+<li>Files: Controls reading, editing, and executing.</li>
+<li>Directories: Controls listing contents and access.</li>
+<li><strong>Octal Notation for Permissions</strong>:</li>
+<li>User: 4 (read), 2 (write), 1 (execute).</li>
+</ul>
+<h2 id="shell-variables"><strong>Shell Variables</strong></h2>
+<ul>
+<li><strong>Variable Types</strong>:</li>
+<li>Local (restricted to shell) and Global/Exported (available to child processes).</li>
+<li><strong>Creating Variables</strong>:</li>
+<li><code>myVar="value"</code>  </li>
+<li>Access: <code>echo $myVar</code></li>
+<li>Exporting: <code>export MYVAR</code></li>
+</ul>
+<h2 id="wildcards-and-scripts"><strong>Wildcards and Scripts</strong></h2>
+<ul>
+<li><strong>Wildcards</strong>:</li>
+<li><code>*</code>: Matches 0+ characters.</li>
+<li><code>?</code>: Matches 1 character.</li>
+<li><code>[abc]</code>: Matches one character from set.</li>
+<li><code>{word1,word2}</code>: Matches listed words.</li>
+<li><strong>Shell Scripts</strong>:</li>
+<li>Store and execute commands sequentially.</li>
+<li>Start a script:<br />
+<code>bash
+    ./scriptname
+    chmod +x scriptname</code></li>
+<li>First line: <code>#!/bin/bash</code></li>
+</ul>
+<h2 id="conditionals-and-loops"><strong>Conditionals and Loops</strong></h2>
+<ul>
+<li><strong>Conditionals</strong>:</li>
+<li><code>if</code>, <code>elif</code>, <code>else</code> structures.</li>
+<li>Comparisons: <code>-eq</code>, <code>-ne</code>, <code>-lt</code>, <code>-gt</code>.</li>
+<li><strong>While Loop Example</strong>:
+  ```bash
+  num=0<br />
+  while [[ $num -lt 3 ]]; do
+    echo $num
+    num=$(( num + 1 ))
+  done</li>
+</ul>
 
 
 

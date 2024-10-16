@@ -1,98 +1,71 @@
-# HACS100 Midterm Review
+# Midterm Review: Introduction to UNIX and Shell Programming
 
-## 1. Intro to UNIX  
-- **UNIX**: A family of operating systems.  
-- **Connections**: Terminal emulation or secure shell (ssh, Windows Terminal, Putty, MobaXTerm).  
-- **Prompt**: Indicates the shell is ready for commands.  
-- **Components**:  
-  - Unified file system  
-  - Kernel  
-  - Processes  
-  - Shell  
+## **Key UNIX Concepts**
+- **UNIX**: A family of operating systems with a unified file system, kernel, processes, and shell.
+- **Connecting to Virtual Machine**:
+  * Use `ssh`, Windows Terminal, or PuTTY/MobaXTerm.
+- **Shells Available**:
+  * BASH, C-shell, T-shell, etc.  
+  * **Usage**: Interpret typed commands and run them.
 
----
+## **Command Line Basics**
+- **Useful Commands**:
+  * `finger [loginID]`: Find user info.
+  * `man [command]`: Open manual page.
+  * `pwd`: Print working directory.
+  * `ls`: List directory contents.
+  * `mkdir` / `rmdir`: Create or remove directories.
+  * `rm filename`: Remove a file.
+- **Vim Editor Basics**:
+  * **Modes**: Insert, Command, Last line.
+  * Commands:
+    * `i`: Enter Insert mode.
+    * `Esc`: Return to Command mode.
+    * `:wq`: Save and quit.
+- **Nano Editor Basics**: No modes.  
+  * `CTRL + O`: Save, `CTRL + X`: Exit.
 
-## 2. Command Line Basics  
-- **Shells**: BASH, C-shell, T-shell, etc., interpret typed commands.  
-- **Commands**:  
-  - `finger [loginID]`: Find user information  
-  - `man [command]`: Open manual page for a command  
-  - `exit`: Close shell  
-  - `logout`: Close login shell  
+## **Permissions and Directory Management**
+- **File and Directory Permissions**:
+  * `chmod` to change permissions.
+  * Read (r), Write (w), Execute (x).
+- **Permissions Application**:
+  * Files: Controls reading, editing, and executing.
+  * Directories: Controls listing contents and access.
+- **Octal Notation for Permissions**:
+  * User: 4 (read), 2 (write), 1 (execute).
 
----
+## **Shell Variables**
+- **Variable Types**:
+  * Local (restricted to shell) and Global/Exported (available to child processes).
+- **Creating Variables**:
+  * `myVar="value"`  
+  * Access: `echo $myVar`
+  * Exporting: `export MYVAR`
 
-## 3. Directories and Files  
-- **Structure**: Tree-like with root `/`.  
-- **Commands**:  
-  - `pwd`: Print working directory  
-  - `cd`: Change directory  
-  - `ls`: List directory contents  
-  - `mkdir` / `rmdir`: Create or remove directories  
-  - `touch filename`: Create an empty file  
-  - `rm filename`: Remove a file  
-  - `cat filename`: Display file contents  
+## **Wildcards and Scripts**
+- **Wildcards**:
+  * `*`: Matches 0+ characters.
+  * `?`: Matches 1 character.
+  * `[abc]`: Matches one character from set.
+  * `{word1,word2}`: Matches listed words.
+- **Shell Scripts**:
+  * Store and execute commands sequentially.
+  * Start a script:  
+    ```bash
+    ./scriptname
+    chmod +x scriptname
+    ```
+  * First line: `#!/bin/bash`
 
----
-
-## 4. Text Editors (Vim & Nano)  
-- **Vim Modes**: Insert, Command, and Last Line.  
-  - `i`: Enter insert mode  
-  - `u`: Undo in command mode  
-  - `:wq`: Write and quit  
-- **Nano**: No modes, simpler to use.  
-
----
-
-## 5. Permissions  
-- **Listing Permissions**: `ls -l`  
-- **Changing Permissions**: `chmod`  
-  - `u, g, o, a`: User, group, others, all  
-  - `r, w, x`: Read, write, execute  
-
----
-
-## 6. Variables  
-- **Types**: Local (current shell), Global (available to child processes).  
-- **Usage**:  
-  - `myVar="value"`: Assign value  
-  - `echo $myVar`: Access value  
-- **Export**: `export MYVAR`  
-- **Quoting**:  
-  - Single: Literal  
-  - Double: Interpret variables  
-  - Back: Execute commands  
-
----
-
-## 7. Wildcards  
-- **Asterisk (*)**: Matches 0 or more characters.  
-- **Question Mark (?)**: Matches exactly one character.  
-- **Square Brackets ([ ])**: Match specific characters or ranges.  
-- **Curly Braces ({ })**: Match one word from a list.  
-
----
-
-## 8. Writing Shell Scripts  
-- **Basics**: Commands stored in files and executed sequentially.  
-- **Create & Run**:  
-  - Use editors like `vim` to write scripts.  
-  - `chmod +x scriptname`: Make executable.  
-  - `./scriptname`: Run the script.  
-
----
-
-## 9. Conditionals  
-- **Comparisons**:  
-  - Numeric: `-eq`, `-ne`, `-lt`, `-gt`  
-  - String: `=`, `!=`  
-  - File tests: `-e`, `-f`, `-d`, `-r`, `-w`, `-x`  
-- **Structure**:  
+## **Conditionals and Loops**
+- **Conditionals**:
+  * `if`, `elif`, `else` structures.
+  * Comparisons: `-eq`, `-ne`, `-lt`, `-gt`.
+- **While Loop Example**:
   ```bash
-  if [[ cond1 ]]; then
-    statement1
-  elif [[ cond2 ]]; then
-    statement2
-  else
-    statement3
-  fi
+  num=0  
+  while [[ $num -lt 3 ]]; do
+    echo $num
+    num=$(( num + 1 ))
+  done
